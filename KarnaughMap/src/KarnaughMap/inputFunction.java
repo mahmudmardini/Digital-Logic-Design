@@ -1,13 +1,13 @@
 package KarnaughMap;
 
-public class M18670310077_inputFunction {
-	
+public class inputFunction {
+
 	private  int a,b,c,d,varNum;
 	private String func;
 	protected String[] terms;
 	
 	
-	M18670310077_inputFunction(String str){
+	inputFunction(String str){
 		func = str.toUpperCase();
 		terms = str.split(" \\+ "); // verilen fonksiyondaki terimleri tek tek alma
 		terms[0] = terms[0].replaceFirst("F =", ""); // ilk terimden F== silme

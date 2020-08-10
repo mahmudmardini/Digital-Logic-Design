@@ -11,9 +11,8 @@ public class Decoder {
 		input = str;
 		
 		try {
-			
+			System.out.print("\nSonuc: ");
 			ParseInputs();
-			 System.out.println("\n1. YÖNTEM İLE");
 				System.out.format("%d,%d,%d,%d,%d,%d,%d,%d \n \n",D0(),D1(),D2(),D3(),D4(),D5(),D6(),D7());
 			
 		

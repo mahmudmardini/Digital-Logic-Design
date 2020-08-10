@@ -1,6 +1,6 @@
 package KarnaughMap;
 
-public class M18670310077_KarnaughMap {
+public class KarnaughMap {
 
 	private StringBuilder newTermBuilder;
 	private String Func, r="";
@@ -11,9 +11,9 @@ public class M18670310077_KarnaughMap {
 	 
 	
 	
-	M18670310077_KarnaughMap(String str){
+	KarnaughMap(String str){
 		Func = str.toUpperCase();
-		M18670310077_inputFunction func = new M18670310077_inputFunction(Func);
+		inputFunction func = new inputFunction(Func);
 		
 		minTermsValue = new int[(int)Math.pow(2, func.VariablesCounter())]; // minterimlerin sayısı = 2^(değişken sayısı)
 		result = new String[str.length()];
@@ -33,7 +33,7 @@ public class M18670310077_KarnaughMap {
 	
 	
 	public void BuildNewTerms() {
-		M18670310077_inputFunction func = new M18670310077_inputFunction(Func);
+		inputFunction func = new inputFunction(Func);
 		for(int i =0; i< func.terms.length;i++) {
 			newTermBuilder = new StringBuilder("    "); 
 			a=-1;b=-1;c=-1;d=-1;		// HANGİ DEĞİŞKERNLER VAR MI YOK MU KONTROL ETMEK AMACIYLA BU 4 DEĞİŞKENİ OLUŞTURDUM
@@ -130,7 +130,7 @@ public class M18670310077_KarnaughMap {
 	
 	// MİNTERİMLERİN DEĞERLERİ ATMA METODU 
 	public void setMinTerms(int i, int j){
-		M18670310077_inputFunction func = new M18670310077_inputFunction(Func);
+		inputFunction func = new inputFunction(Func);
 		if(func.VariablesCounter() == 3) { // DEĞİŞKENLERİN SAYISI 3 İSE BU ŞEKİLDE ATANIR
 			if(newTerm[i][j].equals("000")) { minTermsValue[0] = 1;}
 			else if(newTerm[i][j].equals("001")){minTermsValue[1] = 1;}
